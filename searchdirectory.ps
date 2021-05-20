@@ -1,0 +1,7 @@
+Set-Location -Path E:\ #set this for the root folder in the file
+
+$filename = '*TDPS000PQ.SEL*'#you can use wildcards here for name and for extension. type in what your searching for in the '* *'
+
+$searchinfolder = 'E:\'   #set this for the root folder in the file again I know its redundant but do this again.
+
+Get-ChildItem -Path $searchinfolder -Filter $filename -Recurse | %{$_.FullName} 
